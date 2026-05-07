@@ -8,13 +8,16 @@ void intro(){
   text("Start",285,425);
   textSize(100);
   text("Clicker Game",100,300);
+  
+   
 }
 
-
+  
 
 void introClicks(){
  if (mouseX>275&&mouseX<475&&mouseY>350&&mouseY<450){
  mode=game;
+   theme.loop();
  }
   
 }

@@ -1,3 +1,15 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
+//sound variavles
+Minim minim;
+AudioPlayer theme,point,gameoversong,losealife;
+
+
 //Aiden Xu
 
 
@@ -31,8 +43,14 @@ void setup() {
   score=0;
   lives=3;
   
-  
-}
+  //minim
+  minim=new Minim(this);
+  theme=minim.loadFile("theme.mp3");
+   point=minim.loadFile("success.mp3");
+   gameoversong=minim.loadFile("gameover.mp3");
+    losealife=minim.loadFile("losealife.mp3");
+    theme.loop();
+} 
 
 void draw() {
   if (mode==intro) {
