@@ -19,15 +19,21 @@ final int intro=0;
 final int game=1;
 final int pause=2;
 final int gameover=3;
+final int options=4;
 
 //Target Variables
 float x,y,d;
 float vx,vy; //target velocity
 float score,lives;
+PImage sniper;
+PImage duck;
+float a=random(0,2*PI);
 
 
 void setup() {
   size(800, 800);
+   sniper=loadImage("sniper.png");
+  duck=loadImage("duck.png");
   mode=intro;
   
   //target intialization
@@ -37,8 +43,8 @@ void setup() {
   
   
   //moving
-  vx=random(-5,5);
-  vy=random(-5,5);
+  vx=5*cos(a);
+  vy=5*sin(a);
   
   score=0;
   lives=3;
@@ -61,6 +67,8 @@ void draw() {
     pause();
   } else if (mode==gameover) {
     gameover();
+  } else if (mode==options){
+    options();
   } else {
     println("Error:Mode="+mode);
   }

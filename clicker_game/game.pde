@@ -13,7 +13,7 @@ void game(){
   
   
   
-target();
+target1();
 fill(0);
 textSize(100);
 text("Score:"+score,190,75);
@@ -53,7 +53,7 @@ void gameClicks(){
 }
 
 
-void target(){
+void target1(){
     stroke(#FA1D12);
   fill(255);
   strokeWeight(5);
@@ -63,3 +63,20 @@ void target(){
 circle(x,y,d-60);
   circle(x,y,d-80);
 }
+
+void target1still(){
+      stroke(#FA1D12);
+  fill(255);
+  strokeWeight(5);
+  circle(100,200,d);
+  circle(100,200,d-20);
+  circle(100,200,d-40);
+circle(100,200,d-60);
+  circle(100,200,d-80);
+}
+
+void target2still(){
+  circle(300,200,100);
+  image(sniper,250,150,75,100);
+}
+  

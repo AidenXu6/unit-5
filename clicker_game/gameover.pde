@@ -11,6 +11,7 @@ gameoversong.play();
 
 void gameoverClicks(){
   theme.rewind();
+  theme.loop();
   mode=intro;
     score=0;
   lives=3;

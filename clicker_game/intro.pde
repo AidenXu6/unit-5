@@ -1,11 +1,16 @@
 void intro(){
   background(#1D7C01);
   fill(255);
+  strokeWeight(5);
   tactilerect(275,350,200,100);
   rect(275,350,200,100);
+  tactilerect(275,500,200,100);
+  rect(275,500,200,100);
    fill(0);
   textSize(90);
   text("Start",285,425);
+  textSize(57);
+  text("Options",280,570);
   textSize(100);
   text("Clicker Game",100,300);
   
@@ -17,6 +22,9 @@ void intro(){
 void introClicks(){
  if (mouseX>275&&mouseX<475&&mouseY>350&&mouseY<450){
  mode=game;
+   theme.loop();
+ }else if (mouseX>275&&mouseX<475&&mouseY>500&&mouseY<600){
+   mode=options;
    theme.loop();
  }
   
