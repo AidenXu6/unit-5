@@ -25,15 +25,17 @@ final int options=4;
 float x,y,d;
 float vx,vy; //target velocity
 float score,lives;
+float highscore;
 PImage sniper;
-PImage duck;
+PImage red;
 float a=random(0,2*PI);
+float selectedtarget;
 
 
 void setup() {
   size(800, 800);
    sniper=loadImage("sniper.png");
-  duck=loadImage("duck.png");
+  red=loadImage("red (2).png");
   mode=intro;
   
   //target intialization
@@ -48,6 +50,7 @@ void setup() {
   
   score=0;
   lives=3;
+  highscore=0;
   
   //minim
   minim=new Minim(this);

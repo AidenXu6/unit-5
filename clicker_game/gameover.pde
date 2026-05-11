@@ -5,8 +5,8 @@ gameoversong.play();
  fill(#FF0303);
  textSize(150);
       text("GAME OVER",50,500);
-      textSize(20);
-      text("click anywhere to continue",300,600);
+      textSize(75);
+      text("Highscore:"+highscore,200,600);
 }
 
 void gameoverClicks(){

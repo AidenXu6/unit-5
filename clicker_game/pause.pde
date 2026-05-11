@@ -13,4 +13,6 @@ void pauseClicks(){
     mode=game;
     theme.loop();
   }
+
+ 
 }

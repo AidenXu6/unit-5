@@ -8,12 +8,15 @@ void game(){
     fill(0);
    textSize(30);
   text("Pause",65,110);
+  if (score > highscore) {
+  highscore = score;
+  selectedtarget();
+}
   
   
   
   
   
-target1();
 fill(0);
 textSize(100);
 text("Score:"+score,190,75);
@@ -35,6 +38,8 @@ text("Score:"+score,190,75);
 void gameClicks(){
   if(dist(mouseX,mouseY,x,y)<d){
     score=score+1;
+    vx=vy*1.01;
+    vy=vx*1.01;
     point.rewind();
     point.play();
   }else if (dist(mouseX,mouseY,100,100)<50){
@@ -65,6 +70,7 @@ circle(x,y,d-60);
 }
 
 void target1still(){
+
       stroke(#FA1D12);
   fill(255);
   strokeWeight(5);
@@ -76,7 +82,33 @@ circle(100,200,d-60);
 }
 
 void target2still(){
+  
   circle(300,200,100);
-  image(sniper,250,150,75,100);
+  image(sniper,262,150,75,100);
 }
   
+  void target3still(){
+   
+  circle(500,200,100);
+  image(red,462,150,75,100);
+}
+
+void target2() {
+  circle(x,y,100);
+  image(sniper,x-38,y-50,75,100);
+}
+
+void target3() {
+  circle(x,y,100);
+  image(red,x-38,y-50,75,100);
+}
+
+void selectedtarget(){
+    if (selectedtarget == 1) {
+  target1();
+} else if (selectedtarget == 2) {
+  target2();
+} else if (selectedtarget == 3) {
+  target3();
+}
+}
