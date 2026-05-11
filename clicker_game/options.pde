@@ -10,6 +10,7 @@ void options(){
   target1still();
   target2still();
   target3still();
+  stillselectedtarget();
   
 }
 

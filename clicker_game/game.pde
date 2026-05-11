@@ -10,8 +10,9 @@ void game(){
   text("Pause",65,110);
   if (score > highscore) {
   highscore = score;
-  selectedtarget();
+  
 }
+selectedtarget();
   
   
   
@@ -94,11 +95,15 @@ void target2still(){
 }
 
 void target2() {
+       stroke(#FA1D12);
+  fill(255);
   circle(x,y,100);
   image(sniper,x-38,y-50,75,100);
 }
 
 void target3() {
+       stroke(#FA1D12);
+  fill(255);
   circle(x,y,100);
   image(red,x-38,y-50,75,100);
 }
@@ -110,5 +115,15 @@ void selectedtarget(){
   target2();
 } else if (selectedtarget == 3) {
   target3();
+}
+}
+
+void stillselectedtarget(){
+    if (stillselectedtarget == 1) {
+  target1still();
+} else if (stillselectedtarget == 2) {
+  target2still();
+} else if (stillselectedtarget == 3) {
+  target3still();
 }
 }

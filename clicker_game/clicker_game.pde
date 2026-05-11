@@ -29,7 +29,8 @@ float highscore;
 PImage sniper;
 PImage red;
 float a=random(0,2*PI);
-float selectedtarget;
+int selectedtarget;
+int stillselectedtarget;
 
 
 void setup() {
@@ -51,6 +52,8 @@ void setup() {
   score=0;
   lives=3;
   highscore=0;
+  selectedtarget=1;
+  stillselectedtarget=1;
   
   //minim
   minim=new Minim(this);
