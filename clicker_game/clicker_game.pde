@@ -31,6 +31,8 @@ PImage red;
 float a=random(0,2*PI);
 int selectedtarget;
 int stillselectedtarget;
+float sliderX;
+float diameter;
 
 
 void setup() {
@@ -43,6 +45,8 @@ void setup() {
   x=width/2;
   y=height/2;
   d=100; 
+    sliderX=400;
+  diameter=100;
   
   
   //moving

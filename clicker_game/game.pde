@@ -27,10 +27,10 @@ text("Score:"+score,190,75);
   y=y+vy;
   
   //bouncing
-  if(x<d/2|| x>width-d/2){
+  if(x<diameter/2|| x>width-diameter/2){
     vx=vx*-1;
   }
-    if(y<d/2|| y>height-d/2){
+    if(y<diameter/2|| y>height-diameter/2){
     vy=vy*-1;
   }
  
@@ -63,11 +63,11 @@ void target1(){
     stroke(#FA1D12);
   fill(255);
   strokeWeight(5);
-  circle(x,y,d);
-  circle(x,y,d-20);
-  circle(x,y,d-40);
-circle(x,y,d-60);
-  circle(x,y,d-80);
+  circle(x,y,diameter);
+  circle(x,y,diameter-20);
+  circle(x,y,diameter-40);
+circle(x,y,diameter-60);
+  circle(x,y,diameter-80);
 }
 
 void target1still(){
@@ -75,36 +75,36 @@ void target1still(){
       stroke(#FA1D12);
   fill(255);
   strokeWeight(5);
-  circle(100,200,d);
-  circle(100,200,d-20);
-  circle(100,200,d-40);
-circle(100,200,d-60);
-  circle(100,200,d-80);
+  circle(100,150,diameter);
+  circle(100,150,diameter-20);
+  circle(100,150,diameter-40);
+circle(100,150,diameter-60);
+  circle(100,150,diameter-80);
 }
 
 void target2still(){
   
-  circle(300,200,100);
-  image(sniper,262,150,75,100);
+  circle(300,150,diameter);
+  image(sniper,262,100,75,100);
 }
   
   void target3still(){
    
-  circle(500,200,100);
-  image(red,462,150,75,100);
+  circle(500,150,diameter);
+  image(red,462,100,75,100);
 }
 
 void target2() {
        stroke(#FA1D12);
   fill(255);
-  circle(x,y,100);
+  circle(x,y,diameter);
   image(sniper,x-38,y-50,75,100);
 }
 
 void target3() {
        stroke(#FA1D12);
   fill(255);
-  circle(x,y,100);
+  circle(x,y,diameter);
   image(red,x-38,y-50,75,100);
 }
 
@@ -125,5 +125,39 @@ void stillselectedtarget(){
   target2still();
 } else if (stillselectedtarget == 3) {
   target3still();
+}
+}
+
+void target1show(){
+
+      stroke(#FA1D12);
+  fill(255);
+  strokeWeight(5);
+  circle(500,450,diameter);
+  circle(500,450,diameter-20);
+  circle(500,450,diameter-40);
+circle(500,450,diameter-60);
+  circle(500,450,diameter-80);
+}
+
+void target2show(){
+  
+  circle(500,450,diameter);
+  image(sniper,462,400,75,100);
+}
+  
+  void target3show(){
+   
+  circle(500,450,diameter);
+  image(red,462,400,75,100);
+}
+
+void showselectedtarget(){
+    if (selectedtarget == 1) {
+  target1show();
+} else if (selectedtarget == 2) {
+  target2show();
+} else if (selectedtarget == 3) {
+  target3show();
 }
 }
